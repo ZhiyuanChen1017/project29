@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import squirrel
 from django.http import HttpResponse
+from .forms import squirrelform
 
 def map(request):
     squirrel_list = list(squirrel.objects.all())[:100]
