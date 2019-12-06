@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import squirrel
 from django.http import HttpResponse
 from .forms import squirrelform
@@ -28,7 +28,7 @@ def edit_squirrel(request, unique_squirrel_id):
             }
     return render(request, 'sightings/edit.html', context)
 
-def add_squirrel(request, unique_squirrel_id):
+def add_squirrel(request):
     if request.method == 'POST':
         form = squirrelform(request.POST)
         if form.is_valid():
