@@ -26,3 +26,16 @@ def edit_squirrel(request, unique_squirrel_id):
             'form': form
             }
     return render(request, 'sightings/edit.html', context)
+
+def add_squirrel(request, unique_squirrel_id):
+    if request.method == 'POST':
+        form = squirrelform(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/sightings/')
+    else:
+        form = squirrelform()
+    context = {
+            'form': form,
+            }
+    return render(request, 'sightings/edit.html', context)
