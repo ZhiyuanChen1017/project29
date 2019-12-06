@@ -39,3 +39,25 @@ def add_squirrel(request, unique_squirrel_id):
             'form': form,
             }
     return render(request, 'sightings/edit.html', context)
+
+def stats(request):
+    squirrel_list = list(squirrel.objects.all())
+    count=len(squirrel_list)
+    color_list=[0,0,0,0]
+    gray = squirrel.objects.filter(primary_fur_color='Gray').count()
+    cinnamon = squirrel.objects.filter(primary_fur_color='Cinnamon').count()
+    black = squirrel.objects.filter(primary_fur_color='Black').count()
+    color_unknown = squirrel.objects.filter(primary_fur_color='').count()
+    ground_plane = squirrel.objects.filter(location='Ground Plane').count()
+    above_ground = squirrel.objects.filter(location='Above Ground').count()
+    location_unknown = squirrel.objects.filter(location='').count()
+    running = squirrel.objects.filter(running=True).count()
+    chasing = squirrel.objects.filter(chasing=True).count()
+    climbing = squirrel.objects.filter(climbing=True).count()
+    eating = squirrel.objects.filter(eating=True).count()
+    foraging = squirrel.objects.filter(foraging=True).count()
+    context = {'squirrel_list': squirrel_list, 'count': count, 'gray': gray, 'cinnamon': cinnamon, 'black': black,
+            'color_unknown': color_unknown, 'ground_plane': ground_plane, 'above_ground': above_ground, 
+            'location_unknown': location_unknown, 'running': running, 'chasing': chasing, 'climbing': climbing,
+            'eating': eating, 'foraging': foraging}
+    return render(request, 'sightings/stats.html', context)
