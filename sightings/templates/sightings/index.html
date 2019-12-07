@@ -6,6 +6,7 @@
 	<a href="{% url 'add' %}"><button type='button'>Add new squirrel data</button></a>
 	<a href="{% url 'stats' %}"><button type='button'>Some stats of the squirrels</button></a>
 	<a href="{% url 'map' %}"><button type='button'>Check the first 100 squirrel distribution on map</button></a>
+	<a href="{% url 'home' %}"><button type='button'>Back to homepage</button></a>
     <p>Below displays a list of unique squirrel ids, click to edit</p>
     {% for squirrel in squirrel_list %}
     	<li><a href="/sightings/{{ squirrel.unique_squirrel_id }}/">{{ squirrel.unique_squirrel_id }}</a></li>
