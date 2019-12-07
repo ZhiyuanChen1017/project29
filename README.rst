@@ -21,7 +21,10 @@ Features included:
 -	A view to create a new squirrel sighting
 -	A view with general stats about the sightings
 
-It is allowed to import new up-to-date squirrel csv data and export the current data into a csv format through management commands.
+It is allowed to import new up-to-date squirrel csv data and export the current data into a csv format through management commands::
+
+    $ python manage.py import_squirrel_data /path/to/file.csv
+    $ python manage.py export_squirrel_data /path/to/file.csv
 
 Group Information
 -----------------
