@@ -1,3 +1,3 @@
-from virtual-machine-255421.wsgi import application
+from project29.wsgi import application
 
 app = application
