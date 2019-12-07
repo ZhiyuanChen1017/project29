@@ -9,6 +9,7 @@ Project description
 -------------------
 
 The project takes the 2018 central park squirrel data and track of all the known squirrels in the central park.
+
 The project provides several features based on Django and gcloud deployment.
 
 Features included:
@@ -26,7 +27,9 @@ Group Information
 -----------------
 
 Project Group 29, Tools for Analytics Section 1
+
 Members: Yuanjun Ling, Zhiyuan Chen
+
 UNIs: [yl4273, zc2481]
 
 Links to the project
