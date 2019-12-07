@@ -5,7 +5,7 @@ By: Project Group29 | Members: Yuanjun Ling, Zhiyuan Chen | UNIs: yl4273, zc2481
 
 .. contents::
 
-Project Description
+Project description
 -------------------
 
 The project takes the 2018 central park squirrel data and track of all the known squirrels in the central park.
