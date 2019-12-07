@@ -3,6 +3,11 @@ from .models import squirrel
 from django.http import HttpResponse
 from .forms import squirrelform
 
+def home(request):
+    squirrel_list = list(squirrel.objects.all())
+    context = {'squirrel_list': squirrel_list}
+    return render(request, 'sightings/home.html', context)
+
 def map(request):
     squirrel_list = list(squirrel.objects.all())[:100]
     context = {'sightings': squirrel_list}
