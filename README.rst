@@ -14,12 +14,12 @@ The project provides several features based on Django and gcloud deployment.
 
 Features included:
 
-- A view that gives the guide of the whole project
--	A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map.
--	A view that lists all squirrel sightings with links to edit each
--	A view to update a particular squirrel sighting
--	A view to create a new squirrel sighting
--	A view with general stats about the sightings
+- Located at: / A view that gives the guide of the whole project
+- Located at: /map A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map.
+- Located at: /sightings A view that lists all squirrel sightings with links to edit each
+- Located at: /sightings/<unique_squirrel_id> A view to update a particular squirrel sighting
+- Located at: /sightings/add A view to create a new squirrel sighting
+- Located at: /sightings/stas A view with general stats about the sightings
 
 It is allowed to import new up-to-date squirrel csv data and export the current data into a csv format through management commands::
 
