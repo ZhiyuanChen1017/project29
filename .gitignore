@@ -32,3 +32,8 @@
 .Trashes 
 ehthumbs.db 
 Thumbs.db
+# pyc files #
+#############
+*.pyc
+__pycache__
+collected-static
